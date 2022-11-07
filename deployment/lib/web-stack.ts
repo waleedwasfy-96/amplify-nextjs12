@@ -71,7 +71,7 @@ export class WebAmplifyStack extends Stack {
                 {
                     name: "_LIVE_UPDATES",
                     value:
-                        '[{"name":"Next.js version","pkg":"next-version","type":"internal","version":"latest"}]',
+                        '[{"name":"Amplify CLI","pkg":"@aws-amplify/cli","type":"npm","version":"latest"},{"name":"Next.js version","pkg":"next-version","type":"internal","version":"latest"}]',
                 },
                 {
                     name: "AMPLIFY_SKIP_BACKEND_BUILD",

@@ -163,6 +163,10 @@ export class WebAmplifyStack extends Stack {
                     value:
                         '[{"name":"Next.js version","pkg":"next-version","type":"internal","version":"latest"}]',
                 },
+                {
+                    name: "AMPLIFY_SKIP_BACKEND_BUILD",
+                    value: "TRUE"
+                }
             ],
         });
 

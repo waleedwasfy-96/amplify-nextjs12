@@ -36,7 +36,12 @@ export class WebAmplifyStack extends Stack {
                     statements: [
                         new iam.PolicyStatement({
                             actions: [
-                                "*:*",
+                                "s3:*",
+                                "amplify:*",
+                                "cloudformation:*",
+                                "cloudfront:*",
+                                "iam:*",
+                                "lambda:*"
                             ],
                             resources: ["*"],
                         }),

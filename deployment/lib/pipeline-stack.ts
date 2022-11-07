@@ -2,7 +2,6 @@ import { Stack, StackProps, Stage, StageProps, Tags } from "aws-cdk-lib";
 import { Construct } from "constructs";
 import { pipelines } from "aws-cdk-lib";
 import {WebAmplifyStack} from "./web-stack";
-// import { WebAmplifyStack } from "./web-amplify-stack";
 
 export interface AmplifyStageProps extends StageProps {
     branchName: string;

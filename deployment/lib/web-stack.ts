@@ -25,9 +25,9 @@ export class WebAmplifyStack extends Stack {
     constructor(scope: Construct, id: string, props: AmplifyStackProps) {
         super(scope, id, props);
 
-        // const secret = secretsmanager.Secret.fromSecretAttributes(this, "Secret", {
-        //     secretPartialArn: `arn:aws:secretsmanager:eu-central-1:039085306114:secret:css-secrets-3eVZL2`,
-        // });
+        const secret = secretsmanager.Secret.fromSecretAttributes(this, "Secret", {
+            secretPartialArn: `arn:aws:secretsmanager:ca-central-1:039085306114:secret:secret-oLzfPr`,
+        });
 
         const amplifyRole = new iam.Role(this, "AmplifyRole", {
             assumedBy: new iam.ServicePrincipal("amplify.amazonaws.com"),
@@ -145,7 +145,7 @@ export class WebAmplifyStack extends Stack {
             description: props.appDescription,
             iamServiceRole: amplifyRole.roleArn,
             repository: props.repository,
-            // oauthToken: secret.secretValueFromJson("GithubOauthToken").unsafeUnwrap(),
+            oauthToken: secret.secretValueFromJson("GithubOauthToken").unsafeUnwrap(),
             // basicAuthConfig: {
             //     enableBasicAuth: true,
             //     password: props.basicAuthPassword,

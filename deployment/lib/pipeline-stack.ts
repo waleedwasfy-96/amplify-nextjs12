@@ -1,6 +1,7 @@
 import { Stack, StackProps, Stage, StageProps, Tags } from "aws-cdk-lib";
 import { Construct } from "constructs";
 import { pipelines } from "aws-cdk-lib";
+import {WebAmplifyStack} from "./web-stack";
 // import { WebAmplifyStack } from "./web-amplify-stack";
 
 export interface AmplifyStageProps extends StageProps {
@@ -14,15 +15,15 @@ export class AmplifyStage extends Stage {
 
         const repository = "https://github.com/Leejjon/amplify-nextjs13";
 
-        // new WebAmplifyStack(this, "WebAmplifyStack", {
-        //     appName: "amplify-nextjs13",
-        //     appDescription: "Frontend built using Next.js",
-        //     branchName: props.branchName,
-        //     stageName: props.stageName,
-        //     repository: repository,
-        //     username: "hello",
-        //     basicAuthPassword: "awssupport",
-        // });
+        new WebAmplifyStack(this, "WebAmplifyStack", {
+            appName: "amplify-nextjs13",
+            appDescription: "Frontend built using Next.js",
+            branchName: props.branchName,
+            stageName: props.stageName,
+            repository: repository,
+            username: "hello",
+            basicAuthPassword: "awssupport",
+        });
     }
 }
 

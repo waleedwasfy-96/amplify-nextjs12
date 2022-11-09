@@ -2,7 +2,24 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+interface House {
+  name: string,
+  region: string,
+  url: string
+}
+
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const res = await fetch(`https://www.anapioficeandfire.com/api/houses`)
+  const data: House[] = await res.json();
+
+  console.log("Test some logging!");
+
+  // Pass data to the page via props
+  return { props: { data } }
+}
+
+export default function Home({data}: {data: House[]}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -51,6 +68,11 @@ export default function Home() {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
+        </div>
+        <div>
+          {data.map((house: House) => {
+            return <div key={house.url}>{house.name} from {house.region}</div>
+          })}
         </div>
       </main>
 

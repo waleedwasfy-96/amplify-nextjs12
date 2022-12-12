@@ -15,7 +15,7 @@ applications:
             - ls -la
             - pwd
       artifacts:
-        baseDirectory: app/.next
+        baseDirectory: ../.next
         files:
           - '**/*'
       cache:

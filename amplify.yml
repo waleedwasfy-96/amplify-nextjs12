@@ -11,14 +11,14 @@ applications:
           commands:
             - yarn build
             - ls -la
-            - cd app
+#            - cd app
 #            - cp next.config.js .next/standalone
 #            - cp -R public .next/standalone/public
 #            - cp -R node_modules .next/standalone/node_modules
             - ls -la
             - pwd
       artifacts:
-        baseDirectory: app/.next/standalone/.next
+        baseDirectory: app/.next/
         files:
           - '**/*'
       cache:

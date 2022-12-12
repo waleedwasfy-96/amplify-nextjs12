@@ -92,6 +92,12 @@ export class WebAmplifyStack extends Stack {
             branchName: "with-workspaces",
             stage: "PRODUCTION",
             enableAutoBuild: true,
+            environmentVariables: [
+                {
+                    name: "AMPLIFY_MONOREPO_ROOT",
+                    value: "app"
+                }
+            ]
         });
     }
 }

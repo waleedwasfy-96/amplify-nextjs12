@@ -5,17 +5,15 @@ applications:
       phases:
         preBuild:
           commands:
-            - cd ..
+#            - cd ..
             - yarn install
         build:
           commands:
             - yarn build
             - ls -la
-            - cd app
-            - ls -la
             - pwd
       artifacts:
-        baseDirectory: ../.next
+        baseDirectory: .next
         files:
           - '**/*'
       cache:

@@ -10,6 +10,7 @@ deployment/node_modules
 /.pnp
 .pnp.js
 .idea/
+.turbo/
 
 # testing
 /coverage

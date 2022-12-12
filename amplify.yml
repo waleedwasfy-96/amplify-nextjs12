@@ -11,6 +11,8 @@ applications:
           commands:
             - yarn build
             - cd app
+            - ls -la
+            - pwd
       artifacts:
         baseDirectory: .next
         files:

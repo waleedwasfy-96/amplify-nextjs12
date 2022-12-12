@@ -86,5 +86,12 @@ export class WebAmplifyStack extends Stack {
             stage: "PRODUCTION",
             enableAutoBuild: true,
         });
+
+        new amplify.CfnBranch(this, "WorkspaceBranch", {
+            appId: amplifyApp.attrAppId,
+            branchName: "with-workspaces",
+            stage: "PRODUCTION",
+            enableAutoBuild: true,
+        });
     }
 }

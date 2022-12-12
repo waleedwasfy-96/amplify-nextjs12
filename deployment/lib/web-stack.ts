@@ -94,7 +94,7 @@ export class WebAmplifyStack extends Stack {
             enableAutoBuild: true,
             environmentVariables: [
                 {
-                    name: "AMPLIFY_MONOREPO_ROOT",
+                    name: "AMPLIFY_MONOREPO_APP_ROOT",
                     value: "app"
                 }
             ]

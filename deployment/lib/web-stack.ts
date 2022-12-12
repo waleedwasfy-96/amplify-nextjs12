@@ -41,7 +41,8 @@ export class WebAmplifyStack extends Stack {
                                 "cloudformation:*",
                                 "cloudfront:*",
                                 "iam:*",
-                                "lambda:*"
+                                "lambda:*",
+                                "logs:*"
                             ],
                             resources: ["*"],
                         }),

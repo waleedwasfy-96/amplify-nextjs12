@@ -18,6 +18,7 @@ applications:
             - cp -R .next/static .next/standalone/.next/static
             - cp -R .next/cache .next/standalone/.next/cache
             - ls -la .next/standalone
+            - ls -la .next/standalone/.next
             - pwd
       artifacts:
         baseDirectory: app/.next/

@@ -5,6 +5,9 @@
     "app",
     "common"
   ],
+  "dependencies": {
+    "next": "13.0.2"
+  },
   "devDependencies": {
     "turbo": "^1.6.3"
   },

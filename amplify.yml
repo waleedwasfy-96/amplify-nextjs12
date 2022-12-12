@@ -11,11 +11,11 @@ applications:
           commands:
             - yarn build
             - ls -la
-            - cd app
-            - ls -la
-            - pwd
+#            - cd app
+#            - ls -la
+#            - pwd
       artifacts:
-        baseDirectory: app
+        baseDirectory: .next
         files:
           - '**/*'
       cache:

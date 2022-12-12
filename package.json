@@ -6,7 +6,7 @@
     "common"
   ],
   "dependencies": {
-    "next": "13.0.2"
+    "next": "12.3.4"
   },
   "devDependencies": {
     "turbo": "^1.6.3"

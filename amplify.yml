@@ -5,15 +5,20 @@ applications:
       phases:
         preBuild:
           commands:
-#            - cd ..
+            - cd ..
             - yarn install
         build:
           commands:
             - yarn build
             - ls -la
+            - cd app
+            - cp next.config.js .next/standalone
+            - cp -R public .next/standalone/public
+            - cp -R node_modules .next/standalone/node_modules
+            - ls -la
             - pwd
       artifacts:
-        baseDirectory: .next
+        baseDirectory: app/.next
         files:
           - '**/*'
       cache:

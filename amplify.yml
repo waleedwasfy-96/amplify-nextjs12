@@ -10,7 +10,7 @@ applications:
         build:
           commands:
             - yarn build
-            - cd ..
+            - cd app
       artifacts:
         baseDirectory: .next
         files:

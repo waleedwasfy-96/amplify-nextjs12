@@ -1,0 +1,9 @@
+{
+  "baseBranch": "origin/with-workspaces",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**"]
+    }
+  }
+}

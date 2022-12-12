@@ -1,20 +1,14 @@
 {
-  "name": "amplify-nextjs13",
-  "version": "0.1.0",
+  "name": "nextjsapp",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+  "workspaces": [
+    "app",
+    "common"
+  ],
+  "devDependencies": {
+    "turbo": "^1.6.3"
   },
-  "dependencies": {
-    "@types/node": "18.11.9",
-    "@types/react": "18.0.25",
-    "@types/react-dom": "18.0.8",
-    "next": "13.0.2",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "typescript": "4.8.4"
+  "scripts": {
+    "build": "turbo run build --scope=app --include-dependencies"
   }
 }

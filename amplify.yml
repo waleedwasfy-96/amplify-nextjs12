@@ -11,7 +11,7 @@ applications:
           commands:
             - yarn build
             - ls -la
-#            - cp -R node_modules app/.next/standalone/node_modules
+            - cp -R node_modules app/.next/standalone/node_modules
             - cd app
             - cp next.config.js .next/standalone
             - cp -R public .next/standalone/public

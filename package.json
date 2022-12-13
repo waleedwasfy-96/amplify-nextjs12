@@ -2,8 +2,7 @@
   "name": "nextjsapp",
   "private": true,
   "workspaces": [
-    "app",
-    "common"
+    "app"
   ],
   "dependencies": {
     "next": "12.3.4"

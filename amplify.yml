@@ -16,7 +16,7 @@ applications:
             - cp next.config.js .next/standalone
             - cp -R public .next/standalone/public
             - cp -R .next/node_modules .next/standalone/node_modules
-            - cp -R node_modules .next/standalone/node_modules
+#            - cp -R node_modules .next/standalone/node_modules
             - cp -R .next/static .next/standalone/.next/static
             - cp -R .next/cache .next/standalone/.next/cache
             - ls -la .next/standalone

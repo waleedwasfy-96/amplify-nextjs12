@@ -12,7 +12,7 @@ export class AmplifyStage extends Stage {
     constructor(scope: Construct, id: string, props: AmplifyStageProps) {
         super(scope, id, props);
 
-        const repository = "https://github.com/Leejjon/amplify-nextjs13";
+        const repository = "https://github.com/waleedwasfy-96/amplify-nextjs13";
 
         new WebAmplifyStack(this, "WebAmplifyStack", {
             appName: "amplify-nextjs13",

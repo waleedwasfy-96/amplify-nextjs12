@@ -19,8 +19,6 @@ applications:
             - cp next.config.js .next/standalone
             - mkdir -p .next/standalone/public
             - cp -R public .next/standalone/public
-            - mkdir .next/standalone/node_modules
-            - cp -R .next/node_modules .next/standalone/node_modules
             - cp package.json .next/standalone/
             - mkdir -p .next/standalone/.next/static
             - cp -R .next/static .next/standalone/.next/static

@@ -11,16 +11,21 @@ applications:
           commands:
             - yarn build
             - ls -la
-#            - cp -R node_modules app/.next/standalone/node_modules
+            - cp -R node_modules app/.next/standalone/node_modules
             - cd app
-#            - cp next.config.js .next/standalone
-#            - cp -R public .next/standalone/public
-#            - cp -R .next/node_modules .next/standalone/node_modules
-#            - cp package.json .next/standalone/
-#            - cp -R .next/static .next/standalone/.next/static
-#            - cp -R .next/cache .next/standalone/.next/cache
-#            - ls -la .next/standalone
-#            - ls -la .next/standalone/.next
+            - rm -rf .next/standalone
+            - mkdir -p .next/standalone
+            - cp next.config.js .next/standalone
+            - mkdir -p .next/standalone/public
+            - cp -R public .next/standalone/public
+            - cp -R .next/node_modules .next/standalone/node_modules
+            - cp package.json .next/standalone/
+            - mkdir -p .next/standalone/.next/static
+            - cp -R .next/static .next/standalone/.next/static
+            - mkdir -p .next/standalone/.next/cache
+            - cp -R .next/cache .next/standalone/.next/cache
+            - ls -la .next/standalone
+            - ls -la .next/standalone/.next
             - pwd
       artifacts:
         baseDirectory: app/.next/

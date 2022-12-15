@@ -16,6 +16,8 @@ applications:
             - mkdir ../.next
             - cp -R .next/* ../.next
             - ls -la .next
+            - cd .next
+            - du -sh *
             - pwd
       artifacts:
         baseDirectory: app/.next/

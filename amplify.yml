@@ -14,6 +14,7 @@ applications:
 #            - cp -R node_modules app/.next/standalone/node_modules
             - cd app
             - yarn build
+            - mkdir ../.next
             - cp -R .next/* ../.next 
 #            - cp next.config.js .next/standalone
 #            - cp -R public .next/standalone/public

@@ -8,6 +8,9 @@ frontend:
       commands:
         - npm run build
         - ls -la
+        - cd .next
+        - ls -la
+        - du -sh *
   artifacts:
     baseDirectory: .next
     files:

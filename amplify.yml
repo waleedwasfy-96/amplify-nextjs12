@@ -21,6 +21,7 @@ applications:
             - ls -a
             - cd .next
             - du -sh *
+            - cd ..
       artifacts:
         baseDirectory: .next
         files:

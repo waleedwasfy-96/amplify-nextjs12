@@ -19,6 +19,8 @@ applications:
             - cd app
             - pwd
             - ls -a
+            - cd .next
+            - du -sh *
       artifacts:
         baseDirectory: .next
         files:

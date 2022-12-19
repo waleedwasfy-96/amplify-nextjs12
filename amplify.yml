@@ -5,6 +5,8 @@ applications:
       phases:
         preBuild:
           commands:
+            - amazon-linux-extras install epel -y
+            - yum --enablerepo=epel -y install sshpass
             - pwd
             - cd ..
             - pwd
@@ -21,6 +23,3 @@ applications:
         baseDirectory: .next
         files:
           - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*

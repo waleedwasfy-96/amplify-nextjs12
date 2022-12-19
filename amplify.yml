@@ -11,6 +11,7 @@ frontend:
         - cd .next
         - ls -la
         - du -sh *
+        - cd ..
   artifacts:
     baseDirectory: .next
     files:

@@ -3,10 +3,10 @@ frontend:
   phases:
     preBuild:
       commands:
+        - echo $secrets
         - npm ci
         - amazon-linux-extras install epel -y
         - yum --enablerepo=epel -y install sshpass
-        - env
     build:
       commands:
         - npm run build
